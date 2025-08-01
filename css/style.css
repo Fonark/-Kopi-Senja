@@ -88,7 +88,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("./img/2632560.jpg");
+  background-image: url("../img/2632560.jpg");
   background-repeat: no-repeat;
   max-width: 100%;
   background-size: cover;
