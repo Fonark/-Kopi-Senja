@@ -77,7 +77,7 @@
          <div class="cart-item">
            <img :src="`./img/product-img/${item.img}`" alt="coffee beans 1" />
             <div class="item-setail">
-             <h3>coffee beans 1</h3>
+             <h3 x-text="item.name"></h3>
               <div class="item-price">
               <span x-text="rupiah(item.price)"></span> &times;
               <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
