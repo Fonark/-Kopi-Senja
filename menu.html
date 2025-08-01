@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Menu</title>
+    <!--Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"> Kopi<span>senja</span>. </a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <!-- Ingin langsung menuju bagian “About Us” di index.html, meskipun awalnya bukan buka dari halaman itu. -->
+        <a href="index.html#about">About us</a>
+        <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. contoh("index.html#about") -->
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">Kontak</a>
+      </div>
+
+      <!-- search -->
+      <div class="navbar-extra">
+        <a href="#" id="search-button">
+          <i data-feather="search"></i>
+        </a>
+        <!-- cart -->
+        <a href="#" id="cart">
+          <i data-feather="shopping-cart"></i>
+        </a>
+        <!-- hamburger-menu -->
+        <a href="#" id="hamburger-menu">
+          <i data-feather="menu"></i>
+        </a>
+      </div>
+
+      <!-- fitur search start-->
+      <div class="search-form">
+        <input
+          type="search"
+          id="search-box"
+          placeholder="search here..."
+        /><!-- type= seacrh biar ada tanda x nya  -->
+        <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- fitur search end-->
+
+      <!-- shopping cart start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="/img/kopi-es_imresizer.jpg" alt="coffee beans 1" />
+          <div class="item-setail">
+            <h3>coffee beans 1</h3>
+            <div class="item-price">IDR30K</div>
+          </div>
+          <i data-feather="trash-2" class="icon-trash"></i>
+        </div>
+      </div>
+      <!-- shopping cart end -->
+    </nav>
+    <!-- Navbar end -->
+
+    <main>
+      <!-- section menu start -->
+      <section class="menu">
+        <h2>Menu <span>Kami</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias
+          quisquam quaerat ad dignissimos eveniet!
+          <br />Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
+
+        <div class="row">
+          <div class="menu-card">
+            <img
+              src="/img/kopi-300px.jpg"
+              alt="Kopi Latte"
+              class="menu-card-img"
+            />
+            <h3>- Kopi Latte -</h3>
+            <h4>1 Btc</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/kopi-es_imresizer.jpg"
+              alt="Es kopi"
+              class="menu-card-img"
+            />
+            <h3>- Es Kopi -</h3>
+            <h4>1.2 Btc</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/kopi-hitam-300px.jpg"
+              alt="Espresso"
+              class="menu-card-img"
+            />
+            <h3>- Espresso -</h3>
+            <h4>1 Eth</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/Biji-kopi.jpg"
+              alt="Biji kopi"
+              class="menu-card-img"
+            />
+            <h3>- Biji Kopi -</h3>
+            <h4>0.5 Btc</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/kopi-300px.jpg"
+              alt="Kopi Latte"
+              class="menu-card-img"
+            />
+            <h3>- Kopi Latte -</h3>
+            <h4>1 Btc</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/janosch-diggelmann-R..._imresizer.jpg"
+              alt="Kopi Susu"
+              class="menu-card-img"
+            />
+            <h3>- Kopi Susu -</h3>
+            <h4>1 Btc</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/kopi-es_imresizer.jpg"
+              alt="Es kopi mint"
+              class="menu-card-img"
+            />
+            <h3>- Es kopi mint -</h3>
+            <h4>2 Solana</h4>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="/img/Biji-kopi.jpg"
+              alt="Biji Kopi Tai Gajah"
+              class="menu-card-img"
+            />
+            <h3>- Biji Kopi Tai Gajah -</h3>
+            <h4>5 Btc</h4>
+          </div>
+        </div>
+      </section>
+      <!-- section menu end -->
+    </main>
+
+    <!-- section footer start -->
+    <footer>
+      <div class="sosial">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="link">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Kontak</a>
+      </div>
+
+      <div class="kredit">
+        <p>Created by <a href="#">Ariya Nando.</a> | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- section footer end -->
+
+    <script src="js/script.js"></script>
+
+    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
+    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

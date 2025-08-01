@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kopi Senja</title>
+
+    <!--Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"> Kopi<span>senja</span>. </a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. -->
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">Kontak</a>
+      </div>
+
+      <!-- search -->
+      <div class="navbar-extra">
+        <a href="#" id="search-button">
+          <!-- memanggil search di feather -->
+          <i data-feather="search"></i>
+        </a>
+        <!-- cart -->
+        <a href="products.html" id="cart">
+          <!-- memanggil cart di feather -->
+          <i data-feather="shopping-cart"></i>
+        </a>
+        <!-- hamburger-menu -->
+        <a href="#" id="hamburger-menu">
+          <!-- memanggil hamburger di feather -->
+          <i data-feather="menu"></i>
+        </a>
+      </div>
+
+      <!-- fitur search start-->
+
+      <div class="search-form">
+        <input
+          type="search"
+          id="search-box"
+          placeholder="search here..."
+        /><!-- type= seacrh biar ada tanda x nya  -->
+        <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+
+      <!-- fitur search end-->
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- main start  -->
+    <!--  <main> adalah tempat untuk konten utama — ini seperti "wadah besar" untuk seluruh isi penting halaman kamu. baru kemudian section(pembagian content) lalau di dalam section ada div untuk styling nya-->
+    <main>
+      <!-- section hero(home) start -->
+      <!-- section disini selain jadi pembungkus kaya div, memiliki arti lain yaitu pembagian ke isi materi baru yang akan dibuat-->
+      <section class="hero" id="home">
+        <div class="content">
+          <h1>Kopi Yang Selalu Dikenang Saat <span>Senja</span></h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis sequi harum laudantium?
+          </p>
+          <a href="#">Beli Sekarang</a>
+        </div>
+      </section>
+      <!-- section hero(home) end -->
+
+      <!-- section about us start-->
+      <section class="about" id="about">
+        <h2>Tentang <span>Kami</span></h2>
+        <!-- gambar sisi kiri -->
+        <div class="row">
+          <div>
+            <img src="/img/section-about-us.jpg" alt="tentang kami" />
+            <!-- fungsi alt adalah. jika Gambar gagal dimuat isi dari alt akan tampil sebagai teks pengganti -->
+          </div>
+          <!-- content about-us, di sisi kanan -->
+          <div class="content">
+            <h3>Kenapa Kopi Kami Adalah Yang Tebaik?</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Necessitatibus illo deleniti doloribus consequuntur doloremque
+              excepturi ad provident, sunt mollitia laboriosam?
+              <br />Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Alias, illo? Aut hic iusto praesentium, magnam impedit dolor sunt
+              veniam, velit voluptates dicta ducimus. Quae distinctio
+              repellendus autem quasi corporis consequuntur.
+            </p>
+
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore commodi distinctio beatae delectus, doloribus quia?.
+              <br />Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section testimoni start-->
+      <section class="testimoni">
+        <h2><span>Apa Kata</span> Orang?</h2>
+        <p class="deskripsi">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam sed
+          itaque vitae consequaturvoluptatum <br />Lorem ipsum dolor sit amet
+          consectetur adipisicing.
+        </p>
+
+        <div class="row">
+          <div class="testimoni-card">
+            <img
+              src="/img/img-testimoni/daniel-mtufYfR1KBE-u..._imresizer.jpg"
+              alt="Ablek"
+            />
+            <h3>Kata Ablek</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+              sunt adipisci incidunt pariatur, animi delectus?
+            </p>
+          </div>
+
+          <div class="testimoni-card">
+            <img
+              src="/img/img-testimoni/kasir-kopi_imresizer.jpg"
+              alt="Kasir"
+            />
+            <h3>Kata Kasir</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae qui
+              in beatae.
+            </p>
+          </div>
+
+          <div class="testimoni-card">
+            <img
+              src="/img/img-testimoni/testimoni-kopi_imresizer.jpg"
+              alt="Dendy"
+            />
+            <h3>Kata Dendy</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem
+              ut dolore ad! <br />Lorem ipsum dolor sit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section testimoni end-->
+    </main>
+    <!-- main end-->
+
+    <!-- section footer start -->
+    <footer>
+      <div class="sosial">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="link">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Kontak</a>
+      </div>
+
+      <div class="kredit">
+        <p>Created by <a href="#">Ariya Nando.</a> | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- section footer end -->
+
+    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
+    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
