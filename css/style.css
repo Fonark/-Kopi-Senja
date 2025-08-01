@@ -1,15 +1,12 @@
-/* properti root digunakan untuk variable tersebut bisa digunakan di seluruh css */
 :root {
-  --primary: #b6895b; /* untuk mmebuat variable di css dibutuhkan awalan. --(nama variable) */
+  --primary: #b6895b;
   --bg: #010101;
 }
 
-/* tanda bintang * itu artinya properti nya akan digunakan Full di websiter tersebut 
-contoh = kalau kita pake font = 30 px maka semua teks yang kita gunakan akan menjadi 30px juga */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* berfungsi agar isi konten, dari width/panjang teks yg sudah kita tentukan, tidak terganggu dengan padding dan ukuran border nya*/
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
@@ -17,27 +14,22 @@ contoh = kalau kita pake font = 30 px maka semua teks yang kita gunakan akan men
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg); /*  untuk memanggil variable menggunakan var */
+  background-color: var(--bg);
   color: white;
 }
 
 /* navbar start*/
 .navbar {
-  display: flex; /* mengubah konten menjadi bentuk horizontal dari kiri ke kanan */
-  justify-content: space-between; /* memberikan space di setiap contaier yang beda */
+  display: flex;
+  justify-content: space-between;
   padding: 20px 2%;
-
-  /* fungsi align item agar bisa kita mengatur posisi vertikal nya */
-  align-items: center; /* flex-start, Semua item akan menempel di bagian atas container & flex-end, Semua item akan menempel di bagian bawah container. namun fungsi height tidak akan mengubah tata letak nya kecuali kita ubah jadi center tapi padding bisa*/
-
-  /* rgba menampilakan tranpran di nilai bagian akhir contoh 0,8 berati 80 % */
+  align-items: center;
   background-color: rgba(10, 9, 9, 0.342);
-
   top: 0;
   left: 0;
   right: 0;
-  position: fixed; /* berfungsi agar navbar nya saat di scroll tidak ke ubah ubah namun harus menggunakan left, top, right 0 agar navbar nya tetep seperti semula. contoh = navbar saat discroll tidak hilang karena ada position= fixed, cuman harus dibarengi dengan z-index*/
-  z-index: 9999; /* (syarat penggunaan harus ada position = fixed terlebih dahulu) Semakin besar nilai z-index, maka elemen itu akan tampil di atas elemen lain yang memiliki nilai z-index lebih kecil. */
+  position: fixed;
+  z-index: 9999;
 }
 
 .navbar .navbar-logo {
@@ -53,21 +45,20 @@ body {
 
 .navbar .navbar-nav a {
   color: #fff;
-  display: inline-block; /* inline-block itu gabungan dari inline (agar elemen bisa sejajar dengan elemen lain) dan block (agar bisa diatur padding, margin, width, height */
+  display: inline-block;
   font-size: 1.5rem;
   margin-right: 1.2rem;
   font-weight: 400;
 }
 
 .navbar .navbar-nav a:hover {
-  /* saat mouse mengarah ke objek maka akan mengubah warnanya */
   color: var(--primary);
 }
 
 /* membuat animasi garis bawah saat di hover start*/
 .navbar .navbar-nav a::after {
-  content: ""; /* ::after harus punya content — walau kosong ("") — kalau tidak, dia tidak akan muncul! */
-  display: block; /* block (agar bisa diatur padding, margin, width, height)" & elemen kebawah */
+  content: "";
+  display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0);
@@ -75,10 +66,8 @@ body {
 }
 
 .navbar .navbar-nav a:hover::after {
-  /* saat menggunakan hover atai after jangan menggunakan spasi */
   transform: scaleX(0.5);
 }
-/* membuat animasi garis bawah saat di hover end*/
 
 .navbar .navbar-extra a {
   color: #fff;
@@ -90,33 +79,31 @@ body {
 }
 
 #hamburger-menu {
-  /* kalau mau ngatur css cuman di html nya pake id maka harus dengan menggunakan (#) */
   display: none;
 }
 /* navbar end*/
 
 /* hero section start*/
 .hero {
-  min-height: 100vh; /* artinya tinggi gambar nya full 1 layar*/
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background-image: url("/img/2632560.jpg");
   background-repeat: no-repeat;
   max-width: 100%;
-  background-size: cover; /*  agar gambar yang yang kita dapatkan secara full tanpa terpotong*/
-  background-position: center; /* biar gambar nya pas ditengah */
-  position: relative; /*  karena saya pake hero::after (unutuk membuat linier gradient) maka di elemen utama pemmbungkus nya harus ada position= relative, agar tidak menggangu position = absloat di hero::after. singkatnya induk nya harus memiliki position= relative baru, anaknya/turunan nya bisa pake position = abslout*/
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .hero::after {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 30%; /*  di ubah menjadi 40% agar link "beli sekarang" bisa di hover */
-  bottom: 0%; /* agar gradasi nya bisa sampe bawah. karena tadi height nya di ubah menajdi 40% */
+  height: 30%;
+  bottom: 0%;
   background: linear-gradient(
-    /* linear-gradient adalah fungsi CSS untuk membuat gradasi warna linear (lurus), yaitu transisi halus dari satu warna ke warna lain dalam arah tertentu. */
-      0deg,
+    0deg,
     rgba(1, 1, 3, 1) 8%,
     rgba(250, 250, 250, 0) 60%
   );
@@ -131,7 +118,7 @@ body {
   font-size: 4rem;
   color: #fff;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.9);
-  line-height: 1.3; /* adalah jarak spasi antar teks atau elemennya. semakin besar jarak antar teks akan makin jauh*/
+  line-height: 1.3;
 }
 
 .hero .content span {
@@ -159,13 +146,13 @@ body {
 }
 
 .hero .content a:hover {
-  color: #010101; /* ini tidak bisa karena gradasi nya penuh, maka harus di perkecil terlebih dahulu height nya */
+  color: #010101;
 }
 /* hero section end*/
 
 /* section about start */
 .about {
-  padding: 8rem 7%; /* 10 rem yang pertama adalah padding atas dan bawah sedangkan 7% adalah padding kiri dan kanan */
+  padding: 8rem 7%;
 }
 
 .about h2 {
@@ -180,14 +167,14 @@ body {
 
 .about .row {
   display: flex;
-  gap: 2rem; /* Jarak antara gambar dan teks (dalam contoh ini gap digunakan untuk memberikan jarak antar 2 div yaitu, div gambar dan div teks*/
+  gap: 2rem;
 }
 
 .about .row img {
-  width: 100%; /* Gambar ukurannya proporsional, mengikuti lebar layar */
-  max-width: 120rem; /* Mencegah gambar terlalu besar di layar lebar (contoh ini gambarnya setengah)*/
-  height: auto; /* Biar tidak gepeng */
-  object-fit: contain; /* Biar isi gambar tidak terpotong */
+  width: 100%;
+  max-width: 120rem;
+  height: auto;
+  object-fit: contain;
 }
 
 .about .content h3 {
@@ -231,8 +218,8 @@ body {
 
 .menu p {
   font-weight: 400;
-  max-width: 58rem; /* karena dipake max widht maka teks nya akan ke kiri lagi, walaupun sudah ada text-align: center . maka dari itu diperlukan margin auto */
-  margin: auto; /*  berfungsi agar posisi teks nya ke tengah  */
+  max-width: 58rem;
+  margin: auto;
   text-align: center;
   display: block;
   margin-top: -3.6rem;
@@ -240,7 +227,6 @@ body {
 }
 
 .menu .row {
-  /* style agar gambar nya ke samping dan akan kebawah saat mode tablet */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -255,10 +241,6 @@ body {
 .menu .row .menu-card img {
   border-radius: 50%;
   width: 90%;
-  /* transform → Properti yang akan dianimasikan (misalnya scale, rotate, translate, dll).
-0.4s → Durasi animasi (dalam detik) = 0.4 detik.
-ease → Jenis percepatan (animation timing function):
-Mulai lambat → Cepat di tengah → Melambat di akhir. */
   transition: 0.3s ease;
 }
 
@@ -267,7 +249,7 @@ Mulai lambat → Cepat di tengah → Melambat di akhir. */
 }
 
 .menu .row .menu-card h3 {
-  margin: 1.2rem auto -0.2rem; /* 1.2rem(margin atas) auto(kiri dan kanan) 0.2(margin bawah) */
+  margin: 1.2rem auto -0.2rem;
 }
 
 .menu .row .menu-card h4 {
@@ -277,7 +259,7 @@ Mulai lambat → Cepat di tengah → Melambat di akhir. */
 .menu .row .menu-card h5 {
   background-color: var(--primary);
   width: 40%;
-  margin-left: 30.2%; /* saya pake margin persen karena agar bisa sesuai ama responsive. intinya tidak berubah ubah saat mode tablet */
+  margin-left: 30.2%;
   border-radius: 0.5rem;
   margin-top: 0.2rem;
 }
@@ -362,18 +344,8 @@ Mulai lambat → Cepat di tengah → Melambat di akhir. */
   background-color: var(--primary);
   flex-wrap: wrap;
 }
-/* penggunaan shorthand flex start (untuk map)*/
-/*(Kalau kamu punya display: flex (row), dan di dalamnya ada 2 <div> (misalnya satu berisi peta/map dan satu lagi label atau teks),
- maka lebar area akan dibagi antara kedua <div> itu — sesuai aturan Flexbox.) contoh = jika ada row lalu didalam nya ada 2 div yang satu bisa 60%  dan div ke2 bisa 40% dari besar nya space row*/
+
 .kontak .row .map {
-  /* flex-grow: 1
-Elemen boleh membesar jika ada ruang kosong di kontainer. Nilai 1 berarti “bagi rata dengan elemen lain yang punya grow”.
-
- flex-shrink: 1
-Elemen boleh mengecil jika ruang tidak cukup. Nilai 1 berarti elemen akan menyusut secara proporsional dibandingkan elemen lain.
-
-  flex-basis: 45rem
-Ukuran dasar (awal) elemen adalah 45rem sebelum dipengaruhi grow/shrink. */
   flex: 1 1 45rem;
   height: 40rem;
   width: 100%;
@@ -384,10 +356,9 @@ Ukuran dasar (awal) elemen adalah 45rem sebelum dipengaruhi grow/shrink. */
 .kontak .row .map:hover {
   transform: scale(1.04);
 }
-/* penggunaan shorthand flex end */
 
 .kontak .row form {
-  flex: 1 1 45rem; /* ini saling berkaitan dengan yang flex map. jadi intinya dalam 1 row ada 2 div yaitu div map mengambil spcae 45rem dan div form mengambil space 45rem juga  */
+  flex: 1 1 45rem;
   padding: 2rem 2rem;
   text-align: center;
 }
@@ -441,7 +412,7 @@ footer .sosial {
   justify-content: center;
   padding: 0.5rem 0;
   color: #fff;
-  gap: 1.7rem; /* kalau mau pake gap harus ada display = flex terlebih dahulu */
+  gap: 1.7rem;
 }
 
 footer .sosial a {
@@ -473,22 +444,20 @@ footer .kredit a {
 /* search box start */
 .navbar .search-form {
   position: absolute;
-  top: 100%; /* agar posisi search box nya keluar dari kotak navbar */
+  top: 100%;
   right: 5%;
   background-color: #fff;
-  width: 23%; /* lebar dari kontainer/div nya seacrh box nya */
+  width: 23%;
   height: 3.4rem;
   display: flex;
   align-items: center;
-  /* jadi sumbu vertikal nya 0/ intinya tinggi nya jadi 0, maka seacrh box nya akan kehilahatan menghilang karena tinggi nya 0 */
   transform: scaleY(0);
-  /* transform-origin berguna agar nanti saat ditransisi kan muncul nya tidak dari tengah tapi dari atas  */
   transform-origin: top;
   transition: 0.2s;
 }
 
 .navbar .search-form input {
-  width: 100%; /* agar lebar nya sama dengan elemen pembungkusnya */
+  width: 100%;
   height: 100%;
   padding: 0 1rem;
   font-weight: 500;
@@ -496,7 +465,6 @@ footer .kredit a {
 }
 
 .navbar .search-form label {
-  /* tidak pelru pake asblout karena sudah terdorong oleh input width nya yang 100% */
   color: var(--bg);
   cursor: pointer;
   margin-right: 2%;
@@ -510,7 +478,7 @@ footer .kredit a {
 
 /* section products start */
 .products {
-  padding: 8rem 8%; /* atas , kiri kanan, bawah */
+  padding: 8rem 8%;
 }
 
 .products h2 {
@@ -530,9 +498,7 @@ footer .kredit a {
 }
 
 .products .row {
-  /* pake grid, bisa juga pake flex. cuman untuk responsive sangat cocok untuk pake grid */
   display: grid;
-  /* untuk auto fit selama ukuran resposinve atau layar nya cukup besar maka ukuran colom/fr nya akan tambah terus, dan setiap kolom/ 1fr nya berukuran 30rem. auto fit ini juga akan menyesuaikan jika layar lebar atau resonsive yang digunakan tidak lebih dari  30rem maka hanya bisa muncul 1 kolom/ 1fr dengan lebar 30rem. jadi jika layar lebar lebih dari 60 rem maka akan muncul 2 kolom/ 2fr */
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3.2rem;
   margin-top: 4rem;
@@ -576,7 +542,6 @@ footer .kredit a {
 }
 
 .products .row .products-card .products-img img {
-  /* !! style agr gambar bisa mengikuti ukuran div/kontainer nya, jadi nya img nya tidak melebihi atau melewati ukurang div nya.  */
   height: 80%;
   width: 80%;
 }
@@ -591,9 +556,7 @@ footer .kredit a {
 }
 
 .products .products-star .star3 {
-  fill: var(
-    --primary
-  ); /* bisa di diwarnain bintang nya karena bentuk nya svg/html */
+  fill: var(--primary);
 }
 
 .products .products-star .star4 {
@@ -636,7 +599,7 @@ footer .kredit a {
   font-weight: 500;
 }
 .shopping-cart {
-  position: absolute; /* bisa digunakan karena parent (nav) sudah punya position = fixed/relative */
+  position: absolute;
   top: 100%;
   right: 0;
   height: 100vh;
@@ -668,7 +631,7 @@ footer .kredit a {
 }
 
 .shopping-cart .cart-item .icon-trash {
-  position: absolute; /* parent nya yaitu cart sudah memiliki position relative, maka nya saya disini make ablout biar bebas dipindahkan di dalam cart item  */
+  position: absolute;
   right: 1rem;
   font-size: 1rem;
 }
@@ -761,14 +724,13 @@ footer .kredit a {
 
 /* Modal-item-detail start*/
 .modal {
-  display: none; /* dihilangkan dahulu. nanti dimuncul kan melalui js menjadi flex. */
-  position: fixed; /* berguna agar saat di scroll, detail-produk masih muncul tanpa mempedulikan kita scrol dimana. */
-  z-index: 9999;
+  display: none;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* jadi kalau isi dari container nya cukup untuk menampung isi nya maka tidak akan muncul scroll namun kalau content atau isi nya melebihi container maka akan muncul scroll */
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .modal .modal-container {
@@ -779,8 +741,8 @@ footer .kredit a {
   padding: 1.2rem;
   border: 1px solid #666;
   width: 50%;
-  margin: auto; /* biar ke tengah */
-  height: fit-content; /* tinggi dari kontainer nya akan menyesuaikan dengan isi containernya */
+  margin: auto;
+  height: fit-content;
 }
 
 .modal-container .close-icon {
@@ -791,7 +753,7 @@ footer .kredit a {
 .modal-container .modal-content {
   display: flex;
 
-  flex-wrap: nowrap; /* akan tetep ke kanan bahkan bisa sampe isi elemen nya overflow (isi nya melebihi kontainer) */
+  flex-wrap: nowrap;
 }
 
 .modal-container .modal-content img {
@@ -847,8 +809,7 @@ footer .kredit a {
 /* Laptop */
 @media (max-width: 1366px) {
   html {
-    /* html ini mirip kaya root. artinya gw mengatur ulang dasar styling nya, biar sesuai ama tablet*/
-    font-size: 75%; /* bertujuan agar saat di perkecil atau di ubah veiw nya menjadi tablet tulisan nya akan mengecil agar sesuai dengan ukuran tablet. */
+    font-size: 75%;
   }
 }
 
@@ -858,17 +819,16 @@ footer .kredit a {
     font-size: 62.5%;
   }
   #hamburger-menu {
-    display: inline-block; /* akan memuncul kan lagi saat dalam view tablet */
+    display: inline-block;
   }
 
-  /* membuat style saat humberger dipencet akan memunculkan tampilan. cara tahu nya ubah right nya menjadi 0% */
   .navbar .navbar-nav {
     display: block;
-    position: absolute; /* digunakan agar bisa pindah posisi secara bebas tanpa menggangu elemen lain */
+    position: absolute;
     top: 100%;
     background-color: rgba(241, 241, 241, 0.9);
     width: 18rem;
-    height: fit-content; /* biar teks nya tidak melebihi tinggi kontainer nya  */
+    height: fit-content;
     border-radius: 2%;
     transform: scaleY(0);
     transition: 0.2s;
@@ -877,13 +837,12 @@ footer .kredit a {
   }
 
   .navbar .navbar-nav.active {
-    /* active di sini untuk java script. (bisa liat di file js nya agar lebih mengerti*/
-    transform: scaleY(1); /* lalu dimunculkan lagi dengan right = 0 */
+    transform: scaleY(1);
     right: 0;
   }
 
   .navbar .navbar-nav a {
-    display: block; /* membuat elemen nya ke bawah (vertikal) sedangkan inline ke samping (horizontal) */
+    display: block;
     margin-left: 4.6rem;
     font-size: 2rem;
     padding: 1rem;
@@ -906,7 +865,7 @@ footer .kredit a {
 
   /* about section img*/
   .about .row {
-    flex-wrap: wrap; /*  agar teks nya bisa kebawah yang dari sebelumnya teks nya berada di kanan */
+    flex-wrap: wrap;
   }
   .about .row img {
     height: 93%;
@@ -923,7 +882,6 @@ footer .kredit a {
 
   /* seacrh-box */
   .navbar .search-form.active {
-    /* kenapa bisa pake right? karena sudah ada abslout. coba cek di bagian class yang sama namun bukan bagian media Queries*/
     right: 15.5%;
     height: 59%;
     width: 36%;

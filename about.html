@@ -23,10 +23,9 @@
 
         <div class="navbar-nav">
           <a href="index.html">Home</a>
-          <!-- Ingin langsung menuju bagian “About Us” di index.html, meskipun awalnya bukan buka dari halaman itu. -->
+
           <a href="index.html#about">About us</a>
-          <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. contoh("index.html#about") -->
-          <a href="menu.html">Menu</a>
+
           <a href="products.html">Products</a>
           <a href="#">Kontak</a>
         </div>
@@ -48,12 +47,7 @@
 
         <!-- fitur search start-->
         <div class="search-form">
-          <input
-            type="search"
-            id="search-box"
-            placeholder="search here..."
-          /><!-- type= seacrh biar ada tanda x nya  -->
-          <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+          <input type="search" id="search-box" placeholder="search here..." />
           <label for="search-box"><i data-feather="search"></i></label>
         </div>
         <!-- fitur search end-->
@@ -81,8 +75,6 @@
         </p>
 
         <div class="row">
-          <!-- <iframe> (kepanjangan dari inline frame) adalah elemen HTML yang digunakan untuk menampilkan halaman web lain di dalam halaman web kamu. Jadi, kamu bisa "menyisipkan" 
-            website lain ke dalam website milikmu seperti memasukkan YouTube, Google Maps, atau halaman lain. -->
           <iframe
             class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335425.98049975745!2d-77.22444351849539!3d38.6411620243418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
@@ -94,41 +86,27 @@
           </iframe>
 
           <form action="">
-            <!-- form berfungsi untuk Mengumpulkan input dari pengguna (teks, email, password, dll). -->
             <div class="input-group">
               <i data-feather="user"></i>
-              <!-- membuat label yang bisa diketik -->
-              <input
-                type="text"
-                placeholder="nama"
-              /><!-- fungsin placeholder memunculkan teks di label tersebut. contoh = kaya disini -->
+              <input type="text" placeholder="nama" />
             </div>
 
             <div class="input-group">
               <i data-feather="mail"></i>
-              <!-- membuat label yang bisa diketik -->
-              <input
-                type="text"
-                placeholder="Email"
-              /><!-- fungsin placeholder memunculkan teks di label tersebut. contoh = kaya disini -->
+
+              <input type="text" placeholder="Email" />
             </div>
 
             <div class="input-group">
               <i data-feather="phone"></i>
-              <!-- membuat label yang bisa diketik -->
-              <input
-                type="text"
-                placeholder="no hp"
-              /><!-- fungsin placeholder memunculkan teks di label tersebut. contoh = kaya disini -->
+
+              <input type="text" placeholder="no hp" />
             </div>
 
             <button>Kirim Pesan</button>
           </form>
         </div>
       </section>
-      <!-- section kontak start-->
-
-      <!-- section kontak start-->
     </main>
 
     <!-- section footer start -->
@@ -154,8 +132,6 @@
 
     <script src="js/script.js"></script>
 
-    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
-    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
     <script>
       feather.replace();
     </script>

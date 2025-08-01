@@ -1,9 +1,6 @@
 //toggle class active
 const hamburger = document.querySelector("#hamburger-menu");
-const navbarNav =
-  document.querySelector(
-    ".navbar-nav"
-  ); /* Cari elemen dengan class navbar-nav, simpan ke variabel navbarNav. */
+const navbarNav = document.querySelector(".navbar-nav");
 
 //ketika humberger menu di klik
 hamburger.onclick = (e) => {
@@ -25,8 +22,8 @@ const seacrhBox = document.querySelector("#search-box");
 
 seacrhButton.onclick = (e) => {
   seacrhForm.classList.toggle("active");
-  seacrhBox.focus(); //agar saat search button di klik maka akan langsung dalam mode ketik. kalau gk ada ini maka akan ribet, kita harus pencet dulu kotak form nya/
-  e.preventDefault(); /*  ini berfungsi saat kita tidak ingin mengatifkan link nya. jadi elemen a di html nya tidak berfungsi*/
+  seacrhBox.focus();
+  e.preventDefault();
 };
 
 /* klik di luar seacrh-box untuk menghilangkan */
@@ -51,33 +48,3 @@ document.addEventListener("click", function (e) {
     cartBar.classList.remove("active");
   }
 });
-
-//saat di klik icon mata maka akan memunculkan boxDetail-item tersebut
-/* pake querySelectorall karena kalau pake yang biasa dia hanya akan boisa digunakan oleh elemen yang pertama kali ditemukan oleh js jadi semisal ada 5 card dengan class yg sama, maka hanya elemen pertama yang bisa. maka dari itu kita menggunakan querySelectorall namun bentuk nya akan menjadi nodelist yang artinya kita harus ngasih js, yang mana yang harus diklik karena berati ada 5 list nya. maka dari itu kita menggunakan loop yaitu foreach. */
-/* const eyeButton = document.querySelectorAll(".item-detail-button");
-const boxFull = document.querySelector("#item-detail-modal");
-const closeIcon = document.querySelector(".close-icon");
-const modalContent = document.querySelector(".modal-container");
-
-//box-menu  detailnya nya bisa di pencet di semua
-eyeButton.forEach((btn) => {
-  btn.onclick = (e) => {
-    boxFull.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-//akan menghilangkan Item-detai-modal
-//hilang saat di klik tanda X
-closeIcon.addEventListener("click", function (e) {
-  boxFull.style.display = "none";
-  e.preventDefault();
-});
-
-//hilang saat diklik, di luar dari class modal container(yang box putih/backgroundnya putih) dan mengklik item-detail-modal(yang background nya agak hitam. di luar dari box putih nya)
-document.addEventListener("click", function (e) {
-  if (boxFull.contains(e.target) && !modalContent.contains(e.target)) {
-    boxFull.style.display = "none";
-  }
-});
- */

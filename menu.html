@@ -23,9 +23,7 @@
 
       <div class="navbar-nav">
         <a href="index.html">Home</a>
-        <!-- Ingin langsung menuju bagian “About Us” di index.html, meskipun awalnya bukan buka dari halaman itu. -->
         <a href="index.html#about">About us</a>
-        <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. contoh("index.html#about") -->
         <a href="menu.html">Menu</a>
         <a href="products.html">Products</a>
         <a href="about.html">Kontak</a>
@@ -48,12 +46,7 @@
 
       <!-- fitur search start-->
       <div class="search-form">
-        <input
-          type="search"
-          id="search-box"
-          placeholder="search here..."
-        /><!-- type= seacrh biar ada tanda x nya  -->
-        <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+        <input type="search" id="search-box" placeholder="search here..." />
         <label for="search-box"><i data-feather="search"></i></label>
       </div>
       <!-- fitur search end-->
@@ -191,8 +184,6 @@
 
     <script src="js/script.js"></script>
 
-    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
-    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
     <script>
       feather.replace();
     </script>

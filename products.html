@@ -32,7 +32,6 @@
       <div class="navbar-nav">
         <a href="index.html">Home</a>
         <a href="index.html#about">About us</a>
-        <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. -->
         <a href="menu.html">Menu</a>
         <a href="products.html">Products</a>
         <a href="about.html">Kontak</a>
@@ -48,7 +47,7 @@
         <a href="#" id="cart">
           <!-- memanggil cart di feather -->
           <i data-feather="shopping-cart"></i>
-          <span class="quantity-notif" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span><!-- x-show saat nilai nya 1 maka true akan tampil jika x-how nya tidak ada data dari quantity misal 0, maka akan false yaitu menghilang/hidden -->
+          <span class="quantity-notif" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
         </a>
         <!-- hamburger-menu -->
         <a href="#" id="hamburger-menu">
@@ -64,8 +63,7 @@
           type="search"
           id="search-box"
           placeholder="search here..."
-        /><!-- type= seacrh biar ada tanda x nya  -->
-        <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+        />
         <label for="search-box"><i data-feather="search"></i></label>
       </div>
 
@@ -133,12 +131,11 @@
         </p>
 
         <div class="row" >
-          <!-- item disini adalah objek ({id, name, price dst.} yang diberi nama di sini menjadi item. ) -->
           <template x-for="(item,index) in items" x-key="index"
-            ><!-- fungsi x-key ini adalah kita memberikan identitas setiap objek(item), agar js tidak bigung. kalau semisal banyak data bisa saja js bigung dan lalu mengalami bug. -->
+            >
             <div class="products-card">
               <div class="products-icon">
-                <a href="#" @click.prevent="$store.cart.add(item)"><!-- menyimpan data dari item ke cart dan lalu bisa kita manipulasi  -->
+                <a href="#" @click.prevent="$store.cart.add(item)">
                   <i data-feather="shopping-cart"></i>
                 </a>
                 <a href="#" @click.prevent="openModalManual(item)" class="icon-eye">
@@ -220,9 +217,7 @@
     <!-- Modal Box detail end-->
 
     <script src="js/script.js"></script>
-
-    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
-    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
+    
     <script>
       feather.replace();
     </script>

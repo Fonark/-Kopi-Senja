@@ -25,7 +25,6 @@
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#about">About us</a>
-        <!-- Jadi fungsi # adalah untuk scroll ke bagian tertentu di halaman, contohnya #about, tapi elemen tujuannya harus punya id="about" juga. -->
         <a href="menu.html">Menu</a>
         <a href="products.html">Products</a>
         <a href="about.html">Kontak</a>
@@ -50,14 +49,8 @@
       </div>
 
       <!-- fitur search start-->
-
       <div class="search-form">
-        <input
-          type="search"
-          id="search-box"
-          placeholder="search here..."
-        /><!-- type= seacrh biar ada tanda x nya  -->
-        <!-- Saat kamu klik icon seacrh", kotak input akan langsung aktif -->
+        <input type="search" id="search-box" placeholder="search here..." />
         <label for="search-box"><i data-feather="search"></i></label>
       </div>
 
@@ -66,10 +59,9 @@
     <!-- Navbar end -->
 
     <!-- main start  -->
-    <!--  <main> adalah tempat untuk konten utama — ini seperti "wadah besar" untuk seluruh isi penting halaman kamu. baru kemudian section(pembagian content) lalau di dalam section ada div untuk styling nya-->
+
     <main>
       <!-- section hero(home) start -->
-      <!-- section disini selain jadi pembungkus kaya div, memiliki arti lain yaitu pembagian ke isi materi baru yang akan dibuat-->
       <section class="hero" id="home">
         <div class="content">
           <h1>Kopi Yang Selalu Dikenang Saat <span>Senja</span></h1>
@@ -85,13 +77,10 @@
       <!-- section about us start-->
       <section class="about" id="about">
         <h2>Tentang <span>Kami</span></h2>
-        <!-- gambar sisi kiri -->
         <div class="row">
           <div>
             <img src="/img/section-about-us.jpg" alt="tentang kami" />
-            <!-- fungsi alt adalah. jika Gambar gagal dimuat isi dari alt akan tampil sebagai teks pengganti -->
           </div>
-          <!-- content about-us, di sisi kanan -->
           <div class="content">
             <h3>Kenapa Kopi Kami Adalah Yang Tebaik?</h3>
             <p>
@@ -185,8 +174,6 @@
     </footer>
     <!-- section footer end -->
 
-    <!-- feather icons svg ( Fungsi untuk menambahkan gambar dalam bentuk/kode html)-->
-    <!-- dibutuhkan function ini selama menggunakan feather icon selain hanya menambahkan libary atau cdn nya -->
     <script>
       feather.replace();
     </script>
