@@ -75,7 +75,7 @@
         <template x-for="(item,index) in $store.cart.items" x-key="index">
       
          <div class="cart-item">
-           <img :src="`/img/product-img/${item.img}`" alt="coffee beans 1" />
+           <img :src="`./img/product-img/${item.img}`" alt="coffee beans 1" />
             <div class="item-setail">
              <h3>coffee beans 1</h3>
               <div class="item-price">
@@ -144,7 +144,7 @@
                 </a>
               </div>
               <div class="products-img">
-                <img :src="`/img/product-img/${item.img}`" alt="item.name" />
+                <img :src="`./img/product-img/${item.img}`" alt="item.name" />
               </div>
               <div class="products-content">
                 <h3 x-text="item.name"></h3>
@@ -194,7 +194,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="modal-content">
-          <img src="/img/kopi-es_imresizer.jpg" alt="product 1" />
+          <img src="./img/kopi-es_imresizer.jpg" alt="product 1" />
           <div class="product-content" >
             <h3>Product 1</h3>
             <p>

@@ -79,7 +79,7 @@ function openModalManual(item) {
   modal.querySelector(".products-price").textContent = rupiah(item.price);
 
   const img = modal.querySelector("img");
-  img.src = `/img/product-img/${item.img}`;
+  img.src = `./img/product-img/${item.img}`;
   img.alt = item.name;
 
   feather.replace();
