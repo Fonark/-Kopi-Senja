@@ -2,11 +2,11 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("products", () => ({
     items: [
       /* data dalam bentuk array */
-      { id: 1, name: "biji-kopi1", img: "1.jpg", price: 28000 }, //isi yang dibungkus oleh {} adalah objek
-      { id: 2, name: "biji-kopi2", img: "2.jpg", price: 25000 }, // Index adalah nomor posisi elemen dalam sebuah array atau list. contoh dari index adalah id adalah index yang ke 0,di objek ke 2 dari items.
-      { id: 3, name: "biji-kopi3", img: "3.jpg", price: 21000 }, // value adalah nilai/isi dari index.
-      { id: 4, name: "biji-kopi4", img: "4.jpg", price: 30000 },
-      { id: 5, name: "biji-kopi5", img: "5.jpg", price: 32000 },
+      { id: 1, name: "Biji Kopi Jerman", img: "1.jpg", price: 28000 }, //isi yang dibungkus oleh {} adalah objek
+      { id: 2, name: "Biji Kopi Tai Tikus", img: "2.jpg", price: 25000 }, // Index adalah nomor posisi elemen dalam sebuah array atau list. contoh dari index adalah id adalah index yang ke 0,di objek ke 2 dari items.
+      { id: 3, name: "Biji Bopi Tai Reja", img: "3.jpg", price: 21000 }, // value adalah nilai/isi dari index.
+      { id: 4, name: "Biji Kopi Ablek", img: "4.jpg", price: 30000 },
+      { id: 5, name: "Biji Kopi Dendy", img: "5.jpg", price: 32000 },
     ],
   }));
 
